@@ -1,0 +1,232 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. CABEÇALHO E NAVEGAÇÃO */
+
+header {
+    background-color: #007bff; 
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav a.active {
+    background-color: #0056b3; 
+    font-weight: bold;
+}
+
+/* 3. CONTEÚDO PRINCIPAL */
+
+main {
+    flex-grow: 1; 
+    padding: 40px 0;
+}
+
+section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* 4. SEÇÕES ESPECÍFICAS (INDEX) */
+
+.apresentacao {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #e6f2ff; 
+}
+
+.apresentacao img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    margin-bottom: 15px;
+}
+
+.apresentacao h2 {
+    color: #333;
+    border: none;
+    font-size: 2.5em;
+}
+
+.apresentacao p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+.competencias ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+}
+
+.competencias li {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 20px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #007bff;
+}
+
+/* 5. FORMULÁRIO DE CONTATO */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+#messageBox {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; 
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* 6. RODAPÉ */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; 
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* 7. RESPONSIVIDADE BÁSICA */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        display: inline-block;
+    }
+    
+    .competencias li {
+        flex: 1 1 100%; 
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Diego Fonseca</h1>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="SobreMin.html">Sobre Mim</a>
+                <a href="PaginaContato.html" class="active">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>Entre em Contato</h2>
+                <p>Utilize o formulário abaixo para enviar uma mensagem ou proposta de colaboração.</p>
+
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+
+                <div id="messageBox" class="success" style="display: none;"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Diego dos Santos Fonseca. Todos os direitos reservados.</p>
+            <p>Portfólio DS | IFSertaoPE.</p>
+        </div>
+    </footer>
+
+    <script src="Java.js"></script>
+</body>
+</html>
